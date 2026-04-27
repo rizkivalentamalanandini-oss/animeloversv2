@@ -1,0 +1,165 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login AnimeKu</title>
+
+  <!-- Bootstrap -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
+
+  <style>
+    body {
+      background-color: #1f2122;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .login-box {
+      background-color: #27292a;
+      padding: 40px;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 420px;
+      color: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    .login-box .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .login-box .logo img {
+      max-width: 120px;
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    .form-control {
+      margin-bottom: 15px;
+      border-radius: 10px;
+      padding: 12px;
+    }
+
+    .btn-login {
+      width: 100%;
+      background-color: #ec6090;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .btn-login:hover {
+      background-color: #d94f7d;
+    }
+
+    .extra-text {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .extra-text a {
+      color: #ec6090;
+      text-decoration: none;
+    }
+
+    .extra-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="AnimeKu Logo">
+    </div>
+
+    <!-- Judul -->
+    <h2>Login AnimeKu</h2>
+
+    <!-- Form Login -->
+    <form onsubmit="return loginUser()">
+
+      <!-- Username -->
+      <input 
+        type="text" 
+        id="username" 
+        class="form-control" 
+        placeholder="Masukkan Username" 
+        required
+      >
+
+      <!-- Password -->
+      <input 
+        type="password" 
+        id="password" 
+        class="form-control" 
+        placeholder="Masukkan Password" 
+        required
+      >
+
+      <!-- Tombol -->
+      <button type="submit" class="btn-login">
+        Login Sekarang
+      </button>
+
+    </form>
+
+    <!-- Tambahan -->
+    <div class="extra-text">
+      Selamat datang di website streaming anime kamu 🎌
+      <br><br>
+      <a href="index.html">Kembali ke Beranda</a>
+    </div>
+
+  </div>
+
+  <!-- JS Login -->
+  <script>
+    function loginUser() {
+      let username = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+
+      if (username !== "" && password !== "") {
+        alert("Login berhasil! Selamat datang, " + username + "!");
+        
+        // Pindah ke profile setelah login
+        window.location.href = "profile.html";
+
+        return false;
+      } else {
+        alert("Username dan Password wajib diisi!");
+        return false;
+      }
+    }
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+```
