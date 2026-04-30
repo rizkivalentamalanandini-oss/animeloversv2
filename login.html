@@ -1,56 +1,74 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login - AnimeKu</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login AnimeKu</title>
 
-  <!-- CSS -->
+  <!-- CSS TEMPLATE -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="assets/css/animate.css">
 
+  <!-- STYLE TAMBAHAN -->
   <style>
-    .login-box {
-      max-width: 500px;
-      margin: 80px auto;
+    .login-container {
+      max-width: 450px;
+      margin: 100px auto;
       background: #1f2122;
       padding: 40px;
-      border-radius: 23px;
+      border-radius: 20px;
       text-align: center;
     }
 
-    .login-box h2 {
+    .login-container h2 {
       color: white;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
-    .login-box input {
+    .login-container input {
       width: 100%;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 25px;
+      padding: 14px;
+      margin-bottom: 15px;
       border: none;
-      outline: none;
+      border-radius: 25px;
       background: #27292a;
       color: white;
+      outline: none;
     }
 
-    .login-box button {
+    .login-container button {
       width: 100%;
-      padding: 15px;
+      padding: 14px;
       border: none;
       border-radius: 25px;
       background: #ec6090;
       color: white;
       font-weight: bold;
-      transition: 0.3s;
+      cursor: pointer;
     }
 
-    .login-box button:hover {
-      background: #d94f7d;
+    #message {
+      background: #ff4e4e;
+      color: white;
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 10px;
+      display: none;
+    }
+
+    #alertBox {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      background: #00c851;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 10px;
+      display: none;
     }
   </style>
 </head>
@@ -62,17 +80,10 @@
   <div class="container">
     <nav class="main-nav">
 
-      <!-- LOGO -->
       <a href="index.html" class="logo">
-        <img src="assets/images/logo.png" alt="AnimeKu" style="width:150px; height:auto;">
+        <img src="assets/images/logo.png" alt="AnimeKu" style="width:150px;">
       </a>
 
-      <!-- SEARCH -->
-      <div class="search-input">
-        <input type="text" placeholder="Cari anime...">
-      </div>
-
-      <!-- MENU -->
       <ul class="nav">
         <li><a href="index.html">Beranda</a></li>
         <li><a href="streams.html">Anime Sedang Tayang</a></li>
@@ -84,62 +95,32 @@
   </div>
 </header>
 
-<!-- LOGIN FORM -->
+<!-- ALERT -->
+<div id="alertBox">Login berhasil!</div>
+
+<!-- LOGIN -->
 <div class="container">
-  <div class="page-content">
+  <div class="login-container">
 
-    <div class="login-box">
-      <h2><em>Login</em> AnimeKu</h2>
+    <h2>Login AnimeKu</h2>
 
-      <!-- INPUT NAMA -->
-      <input type="text" id="username" placeholder="Masukkan Nama">
+    <!-- USERNAME -->
+    <input type="text" id="username" placeholder="Masukkan Username">
 
-      <!-- INPUT PASSWORD -->
-      <input type="password" id="password" placeholder="Masukkan Password">
+    <!-- PASSWORD -->
+    <input type="password" id="password" placeholder="Masukkan Password">
 
-      <!-- BUTTON -->
-      <button onclick="loginUser()">Login Sekarang</button>
+    <!-- BUTTON -->
+    <button onclick="loginUser()">Login</button>
 
-      <p style="color: #666; margin-top:20px;">
-        Masuk untuk menyimpan anime favoritmu!
-      </p>
-    </div>
+    <!-- MESSAGE -->
+    <p id="message"></p>
 
   </div>
 </div>
 
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <p>© 2026 AnimeKu | Halaman Login</p>
-  </div>
-</footer>
-
 <!-- JS -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/custom.js"></script>
-
-<!-- LOGIN SCRIPT -->
-<script>
-function loginUser() {
-  let username = document.getElementById("username").value;
-  let password = document.getElementById("password").value;
-
-  if(username === "" || password === "") {
-    alert("Isi nama dan password dulu ya!");
-    return;
-  }
-
-  // Simpan nama ke browser
-  localStorage.setItem("username", username);
-
-  alert("Login berhasil, selamat datang " + username + "!");
-
-  // Pindah ke profile
-  window.location.href = "profile.html";
-}
-</script>
+<script src="js/register.js" defer></script>
 
 </body>
 </html>
