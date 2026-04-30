@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Nonton Anime - Streaming</title>
+  <title>Nonton Anime - AnimeKu</title>
 
   <!-- CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,57 +17,58 @@
 
 <body>
 
-<!-- HEADER (SAMA KAYA INDEX) -->
+<!-- HEADER -->
 <header class="header-area header-sticky">
   <div class="container">
     <nav class="main-nav">
 
+      <!-- LOGO -->
       <a href="index.html" class="logo">
-        <img src="assets/images/logo.png" alt="Logo AnimeKu">
+        <img src="assets/images/logo.png" alt="Logo AnimeKu" style="width:150px; height:auto;">
       </a>
 
+      <!-- SEARCH -->
       <div class="search-input">
         <input type="text" placeholder="Cari anime...">
       </div>
 
+      <!-- MENU -->
       <ul class="nav">
         <li><a href="index.html">Beranda</a></li>
-        <li><a href="#">Daftar Anime</a></li>
-        <li><a href="#">Sedang Tayang</a></li>
-        <li><a href="#">Film</a></li>
-
-        <!-- AKTIF DI SINI -->
-        <li><a href="streams.html" class="active">Nonton</a></li>
-
-        <li><a href="#">Profil</a></li>
+        <li><a href="streams.html" class="active">Anime Sedang Tayang</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="profile.html">Profil</a></li>
       </ul>
 
     </nav>
   </div>
 </header>
 
+<!-- CONTENT -->
 <div class="container">
 <div class="page-content">
 
 <!-- JUDUL -->
 <div class="heading-section">
-  <h4><em>Nonton</em> Anime</h4>
+  <h4><em>Anime</em> Sedang Tayang</h4>
 </div>
 
-<!-- VIDEO PLAYER -->
+<!-- DESKRIPSI -->
 <div class="main-banner">
-  <iframe width="100%" height="400"
-    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-    title="Video Anime"
-    frameborder="0"
-    allowfullscreen>
-  </iframe>
+  <div class="header-text">
+    <h6>Selamat Datang di Halaman Streaming</h6>
+    <h4><em>Pilih Anime</em> Favoritmu</h4>
+    <p>
+      Nikmati berbagai anime populer pilihan terbaik seperti Naruto, One Piece,
+      Demon Slayer, dan Jujutsu Kaisen.
+    </p>
+  </div>
 </div>
 
-<!-- LIST EPISODE -->
+<!-- LIST ANIME -->
 <div class="live-stream">
   <div class="heading-section">
-    <h4><em>Episode</em> Anime</h4>
+    <h4><em>Daftar</em> Anime</h4>
   </div>
 
   <div class="row">
@@ -76,10 +77,12 @@
     <div class="col-lg-3 col-sm-6">
       <div class="item">
         <div class="thumb">
-          <img src="assets/images/popular-01.jpg" alt="Naruto Shippuden">
+          <a href="naruto.html">
+            <img src="assets/images/popular-01.jpg" alt="Naruto Shippuden">
+          </a>
         </div>
         <div class="down-content">
-          <h4>Naruto Episode 1</h4>
+          <h4><a href="naruto.html">Naruto Shippuden</a></h4>
         </div>
       </div>
     </div>
@@ -88,10 +91,12 @@
     <div class="col-lg-3 col-sm-6">
       <div class="item">
         <div class="thumb">
-          <img src="assets/images/popular-02.jpg" alt="One Piece">
+          <a href="onepiece.html">
+            <img src="assets/images/popular-02.jpg" alt="One Piece">
+          </a>
         </div>
         <div class="down-content">
-          <h4>One Piece Episode 1</h4>
+          <h4><a href="onepiece.html">One Piece</a></h4>
         </div>
       </div>
     </div>
@@ -100,27 +105,61 @@
     <div class="col-lg-3 col-sm-6">
       <div class="item">
         <div class="thumb">
-          <img src="assets/images/popular-03.jpg" alt="Demon Slayer">
+          <a href="demonslayer.html">
+            <img src="assets/images/popular-03.jpg" alt="Demon Slayer">
+          </a>
         </div>
         <div class="down-content">
-          <h4>Demon Slayer Episode 1</h4>
+          <h4><a href="demonslayer.html">Demon Slayer</a></h4>
         </div>
       </div>
     </div>
 
-    <!-- JUJUTSU KAISEN -->
+    <!-- JUJUTSU -->
     <div class="col-lg-3 col-sm-6">
       <div class="item">
         <div class="thumb">
-          <img src="assets/images/popular-04.jpg" alt="Jujutsu Kaisen The Culling Game Part 1">
+          <a href="jujutsu.html">
+            <img src="assets/images/popular-04.jpg" alt="Jujutsu Kaisen">
+          </a>
         </div>
         <div class="down-content">
-          <h4>Jujutsu Kaisen The Culling Game Part 1 Episode 1</h4>
+          <h4><a href="jujutsu.html">Jujutsu Kaisen</a></h4>
         </div>
       </div>
     </div>
 
   </div>
+</div>
+
+<!-- REKOMENDASI -->
+<div class="gaming-library">
+  <div class="heading-section">
+    <h4><em>Rekomendasi</em> Tambahan</h4>
+  </div>
+
+  <!-- ITEM 1 -->
+  <div class="item">
+    <ul>
+      <li><img src="assets/images/game-01.jpg" alt="" class="templatemo-item"></li>
+      <li><h4>Attack on Titan</h4><span>Dark Fantasy</span></li>
+      <li><h4>Episode</h4><span>87 Episode</span></li>
+      <li><h4>Rating</h4><span>9.1/10</span></li>
+      <li><h4>Status</h4><span>Selesai</span></li>
+    </ul>
+  </div>
+
+  <!-- ITEM 2 -->
+  <div class="item">
+    <ul>
+      <li><img src="assets/images/game-02.jpg" alt="" class="templatemo-item"></li>
+      <li><h4>Chainsaw Man</h4><span>Action • Horror</span></li>
+      <li><h4>Episode</h4><span>12 Episode</span></li>
+      <li><h4>Rating</h4><span>8.8/10</span></li>
+      <li><h4>Status</h4><span>Ongoing</span></li>
+    </ul>
+  </div>
+
 </div>
 
 </div>
@@ -129,13 +168,14 @@
 <!-- FOOTER -->
 <footer>
   <div class="container">
-    <p>© 2026 AnimeKu | Halaman Nonton Anime</p>
+    <p>© 2026 AnimeKu | Halaman Streaming Anime</p>
   </div>
 </footer>
 
 <!-- JS -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/custom.js"></script>
 
 </body>
 </html>
