@@ -1,165 +1,144 @@
-```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login AnimeKu</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - AnimeKu</title>
 
-  <!-- Bootstrap -->
+  <!-- CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Template CSS -->
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/templatemo-cyborg-gaming.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
 
   <style>
-    body {
-      background-color: #1f2122;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-    }
-
     .login-box {
-      background-color: #27292a;
+      max-width: 500px;
+      margin: 80px auto;
+      background: #1f2122;
       padding: 40px;
-      border-radius: 20px;
-      width: 100%;
-      max-width: 420px;
-      color: white;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-    }
-
-    .login-box .logo {
+      border-radius: 23px;
       text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .login-box .logo img {
-      max-width: 120px;
     }
 
     .login-box h2 {
-      text-align: center;
-      margin-bottom: 25px;
-      font-weight: 700;
+      color: white;
+      margin-bottom: 30px;
     }
 
-    .form-control {
-      margin-bottom: 15px;
-      border-radius: 10px;
-      padding: 12px;
-    }
-
-    .btn-login {
+    .login-box input {
       width: 100%;
-      background-color: #ec6090;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 25px;
       border: none;
-      padding: 12px;
-      border-radius: 10px;
+      outline: none;
+      background: #27292a;
+      color: white;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 25px;
+      background: #ec6090;
       color: white;
       font-weight: bold;
-      font-size: 16px;
       transition: 0.3s;
     }
 
-    .btn-login:hover {
-      background-color: #d94f7d;
-    }
-
-    .extra-text {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 14px;
-      color: #ccc;
-    }
-
-    .extra-text a {
-      color: #ec6090;
-      text-decoration: none;
-    }
-
-    .extra-text a:hover {
-      text-decoration: underline;
+    .login-box button:hover {
+      background: #d94f7d;
     }
   </style>
 </head>
+
 <body>
 
-  <div class="login-box">
+<!-- HEADER -->
+<header class="header-area header-sticky">
+  <div class="container">
+    <nav class="main-nav">
 
-    <!-- Logo -->
-    <div class="logo">
-      <img src="assets/images/logo.png" alt="AnimeKu Logo">
-    </div>
+      <!-- LOGO -->
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.png" alt="AnimeKu" style="width:150px; height:auto;">
+      </a>
 
-    <!-- Judul -->
-    <h2>Login AnimeKu</h2>
+      <!-- SEARCH -->
+      <div class="search-input">
+        <input type="text" placeholder="Cari anime...">
+      </div>
 
-    <!-- Form Login -->
-    <form onsubmit="return loginUser()">
+      <!-- MENU -->
+      <ul class="nav">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="streams.html">Anime Sedang Tayang</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
+        <li><a href="profile.html">Profil</a></li>
+      </ul>
 
-      <!-- Username -->
-      <input 
-        type="text" 
-        id="username" 
-        class="form-control" 
-        placeholder="Masukkan Username" 
-        required
-      >
+    </nav>
+  </div>
+</header>
 
-      <!-- Password -->
-      <input 
-        type="password" 
-        id="password" 
-        class="form-control" 
-        placeholder="Masukkan Password" 
-        required
-      >
+<!-- LOGIN FORM -->
+<div class="container">
+  <div class="page-content">
 
-      <!-- Tombol -->
-      <button type="submit" class="btn-login">
-        Login Sekarang
-      </button>
+    <div class="login-box">
+      <h2><em>Login</em> AnimeKu</h2>
 
-    </form>
+      <input type="text" id="username" placeholder="Masukkan Nama">
+      <input type="email" id="email" placeholder="Masukkan Email">
+      <input type="password" id="password" placeholder="Masukkan Password">
 
-    <!-- Tambahan -->
-    <div class="extra-text">
-      Selamat datang di website streaming anime kamu 🎌
-      <br><br>
-      <a href="index.html">Kembali ke Beranda</a>
+      <button onclick="loginUser()">Login Sekarang</button>
+
+      <p style="color: #666; margin-top:20px;">
+        Masuk untuk menyimpan anime favoritmu!
+      </p>
     </div>
 
   </div>
+</div>
 
-  <!-- JS Login -->
-  <script>
-    function loginUser() {
-      let username = document.getElementById("username").value;
-      let password = document.getElementById("password").value;
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>© 2026 AnimeKu | Halaman Login</p>
+  </div>
+</footer>
 
-      if (username !== "" && password !== "") {
-        alert("Login berhasil! Selamat datang, " + username + "!");
-        
-        // Pindah ke profile setelah login
-        window.location.href = "profile.html";
+<!-- JS -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/custom.js"></script>
 
-        return false;
-      } else {
-        alert("Username dan Password wajib diisi!");
-        return false;
-      }
-    }
-  </script>
+<!-- LOGIN SCRIPT -->
+<script>
+function loginUser() {
+  let username = document.getElementById("username").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
 
-  <!-- Bootstrap JS -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  if(username === "" || email === "" || password === "") {
+    alert("Isi semua data dulu ya!");
+    return;
+  }
+
+  // Simpan data ke browser
+  localStorage.setItem("username", username);
+  localStorage.setItem("email", email);
+
+  alert("Login berhasil, selamat datang " + username + "!");
+
+  // Pindah ke profile
+  window.location.href = "profile.html";
+}
+</script>
 
 </body>
 </html>
-```
