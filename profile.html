@@ -65,10 +65,10 @@
             <!-- Nama dari login -->
             <h4 id="profile-name">User AnimeKu</h4>
 
-            <!-- Email dari login -->
-            <p id="profile-email">Email user akan tampil di sini</p>
+            <!-- Deskripsi -->
+            <p>Selamat datang di AnimeKu, selamat menonton anime favoritmu!</p>
 
-            <!-- TOMBOL FIX -->
+            <!-- Tombol -->
             <div class="main-border-button">
               <a href="streams.html">Mulai Nonton</a>
             </div>
@@ -200,14 +200,9 @@
 <!-- PROFILE SCRIPT -->
 <script>
   let username = localStorage.getItem("username");
-  let email = localStorage.getItem("email");
 
   if (username) {
     document.getElementById("profile-name").innerText = username;
-  }
-
-  if (email) {
-    document.getElementById("profile-email").innerText = email;
   }
 </script>
 
