@@ -10,8 +10,7 @@ function loginUser() {
     return;
   }
 
-  if 
-  (username === "heri" && password === "123") {
+  if (username === "heri" && password === "123") {
 
     localStorage.setItem("username", username);
 
