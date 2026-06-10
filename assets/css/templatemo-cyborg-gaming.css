@@ -1735,4 +1735,16 @@ body {
   .gaming-library .item ul li {
     width: 16%;
   }
+
+}
+.logo-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ec6090;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.logo-text:hover {
+  color: white;
 }
