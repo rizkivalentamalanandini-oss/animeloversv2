@@ -845,14 +845,17 @@ Most Popular Style
 }
 
 .most-popular .item ul {
-  float: right;
-  margin-top: 20px;
+  float: none;
+  margin-top: 10px;
+  padding-left: 0;
 }
 
 .most-popular .item ul li {
-  text-align: right;
+  text-align: left;
   color: #fff;
   font-size: 14px;
+  display: inline-block;
+  margin-right: 15px;
 }
 
 .most-popular .item ul li:first-child i {
